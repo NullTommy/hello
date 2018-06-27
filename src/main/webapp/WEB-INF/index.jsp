@@ -18,7 +18,8 @@
     <%--<script type="text/javascript" src="http://static.360buyimg.com/devfe/??oper-rework/1.0.0/js/jquery.min.js,oper-rework/1.0.0/js/oper-jquery-fn.js,oper-rework/1.0.0/js/semantic/semantic.js,oper-rework/1.0.0/js/webuploader-0.1.5/webuploader.min.js" source="widget"></script>--%>
 </head>
 <body>
-<h2>Hello World! </h2>
+<h2>Hello World! index根文件夹</h2>
+<h2>本页路径：http://localhost:8080/</h2>
 <div class="oper-steps">
     <div class="oper-step">
     <span class="oper-step-text">

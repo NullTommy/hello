@@ -35,6 +35,15 @@
       <artifactId>fastjson</artifactId>
       <version>${fastjson.v}</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+    <!--引入Spring MVC 的包-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>4.3.18.RELEASE</version>
+    </dependency>
+
   </dependencies>
 
   <build>
