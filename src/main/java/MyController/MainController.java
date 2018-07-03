@@ -21,4 +21,10 @@ public class MainController {
         //http://localhost:8080/test2.do
         return "jsp/index";
     }
+
+    @RequestMapping(value = "/language.do",method = RequestMethod.GET)
+    public String language() {
+        //http://localhost:8080/language.do
+        return "jsp/language";
+    }
 }
