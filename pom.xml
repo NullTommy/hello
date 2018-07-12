@@ -19,6 +19,7 @@
     <maven.compiler.target>1.7</maven.compiler.target>
     <!--以下为自己引入-->
     <fastjson.v>1.2.31</fastjson.v>
+    <guava.version>19.0</guava.version>
   </properties>
 
   <dependencies>
@@ -43,7 +44,30 @@
       <artifactId>spring-webmvc</artifactId>
       <version>4.3.18.RELEASE</version>
     </dependency>
+    <!--引入两个包：用于Excel的导出；一个用于后台获取request，poi用于构建Excel-->
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>2.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>3.9</version>
+    </dependency>
 
+    <!--引入net.sf.jxls：用于实现从模板导出Excel-->
+    <dependency>
+      <groupId>net.sf.jxls</groupId>
+      <artifactId>jxls-core</artifactId>
+      <version>1.0.6</version>
+    </dependency>
+    <!--引入工具类-->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>${guava.version}</version>
+    </dependency>
   </dependencies>
 
   <build>
