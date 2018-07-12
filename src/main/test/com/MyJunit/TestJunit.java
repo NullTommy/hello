@@ -1,4 +1,4 @@
-package MyJunit;
+package com.MyJunit;
 
 import org.junit.*;
 

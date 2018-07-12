@@ -6,7 +6,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <!-- 配置包扫描器 -->
-    <context:component-scan base-package="MyController"/>
+    <context:component-scan base-package="com"/>
     <!-- 配置注解驱动 -->
     <mvc:annotation-driven/>
     <!-- 只把动态信息当做controller处理，忽略静态信息 -->

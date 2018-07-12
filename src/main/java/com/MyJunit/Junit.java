@@ -1,4 +1,4 @@
-package MyJunit;
+package com.MyJunit;
 
 /**
  * Created by panghaichen on 2018-06-29 14:12
