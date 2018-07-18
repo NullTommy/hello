@@ -38,4 +38,20 @@
         </bean>
     </mvc:interceptors>
 
+
+    <!-- 引入properties配置文件 -->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:system.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--实现从properties文件中取值并自动注入-->
+    <bean id="myBean" class="com.MyModel.MyBean">
+        <property name="name" value="${test.name}"></property>
+        <property name="id" value="${test.id}"></property>
+    </bean>
+
 </beans>
