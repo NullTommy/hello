@@ -48,10 +48,6 @@
         </property>
     </bean>
 
-    <!--实现从properties文件中取值并自动注入-->
-    <bean id="myBean" class="com.MyModel.MyBean">
-        <property name="name" value="${test.name}"></property>
-        <property name="id" value="${test.id}"></property>
-    </bean>
+    <import resource="classpath:beans.xml"/>
 
 </beans>

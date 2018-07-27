@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--注意：schema写不全可能会报错-->
+<beans xmlns="http://www.springframework.org/schema/beans"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--实现从properties文件中取值并自动注入-->
+    <bean id="myBean" class="com.MyModel.MyBean">
+        <property name="name" value="${test.name}"></property>
+        <property name="id" value="${test.id}"></property>
+    </bean>
+
+</beans>
