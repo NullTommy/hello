@@ -6,6 +6,7 @@ import com.MyUtils.ExcelUtil;
 import com.MyModel.MyBean;
 import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Maps;
+import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,10 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -31,6 +36,8 @@ public class MainController {
     public ExcelExportService excelExportService;
     @Resource
     private MyBean myBean;
+    @Resource
+    private BasicDataSource dataSource;
 
     @RequestMapping(value = "/test.do",method = RequestMethod.GET)
     public String index() {
@@ -56,6 +63,24 @@ public class MainController {
         System.out.println("Spring根据属性文件自动注入：MyBean的Name:"+myBean.getName());
         System.out.println("Spring根据属性文件自动注入：MyBean的ID:"+myBean.getId());
         return JSON.toJSONString(myBean);
+    }
+
+    @RequestMapping(value = "/testDataSource.do",method = RequestMethod.GET)
+    public void testDataSource() {
+        String sql = "select * from test"; //具体sql
+
+        try {
+            Connection conn = dataSource.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                System.out.println("id : " + rs.getInt(1) + " name : "
+                        + rs.getString(2) );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @RequestMapping(value = "/exportIndex.do",method = RequestMethod.GET)

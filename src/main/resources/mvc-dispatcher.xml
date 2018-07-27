@@ -49,5 +49,6 @@
     </bean>
 
     <import resource="classpath:beans.xml"/>
+    <import resource="classpath:datasource.xml"/>
 
 </beans>
