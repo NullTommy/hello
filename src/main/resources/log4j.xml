@@ -67,6 +67,11 @@
         <appender-ref ref="FILE"/>
     </logger>
 
+    <logger name="com" additivity="false">
+        <level value="ERROR" />
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
     <!--通过<category></category>的定义可以将各个包中的类日志输出到不同的日志文件中-->
     <!--category 会和root并存-->
     <!--logger和category如果存在同样位置的输出会报错:这个并存关系不是很理解，不建议同时使用,增加理解难度-->
@@ -79,9 +84,8 @@
 
     <!--默认输出到的地方-->
     <root>
-        <!--<priority value="ERROR"/>-->
         <priority value="WARN"/>
-        <appender-ref ref="CONSOLE"/>
+        <!--<appender-ref ref="CONSOLE"/>-->
         <appender-ref ref="FILE"/>
         <appender-ref ref="ROLLFILE"/>
     </root>

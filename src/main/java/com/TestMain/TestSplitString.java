@@ -49,7 +49,7 @@ public class TestSplitString {
     static private  List<String> parse140StringList(StringBuilder stringBuilder){
         String s = stringBuilder.toString();
         Double splitSize = 140.0;
-        int resultSize = 132;//截取后的大小
+        int resultSize = 130;//截取后的大小
         List<String> stringList = new ArrayList<>();
 
         //需要分割

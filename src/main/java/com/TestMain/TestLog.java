@@ -12,6 +12,7 @@ public class TestLog {
 }
 
 class Test {
+    //注意这两个方法的不同。里面的参数："Test"和Test.class实际对应的是log4j.xml的logger的name属性（String类型）。
     final Logger log = Logger.getLogger(Test.class);
     public void test() {
         log.debug("hello this is log4j debug log");
