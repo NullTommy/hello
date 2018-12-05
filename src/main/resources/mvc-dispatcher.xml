@@ -27,6 +27,17 @@
         <property name="useCodeAsDefaultMessage" value="true"/>
     </bean>
 
+    <!-- 工具，可手动获取对应语言下的消息值 -->
+    <bean id="messageSourceHelper" class="com.MyUtils.MessageSourceHelper">
+        <property name="messageSource" ref="messageSource">
+        </property>
+    </bean>
+
+    <bean class="com.MyUtils.MessageSourceUtils">
+        <property name="helper" ref="messageSourceHelper">
+        </property>
+    </bean>
+
     <!-- 本地化资源处理器 -->
     <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
     </bean>
