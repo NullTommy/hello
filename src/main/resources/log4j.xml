@@ -61,31 +61,20 @@
     <!--通过<logger></logger>的定义可以将各个包中的类日志输出到不同的日志文件中-->
     <!--优先级高于:默认的Root（会覆盖root）-->
     <!--logger和category如果存在同样位置的输出会报错:这个并存关系不是很理解，不建议同时使用,增加理解难度-->
-    <logger name="com.TestMain.Test" additivity="false">
+    <!--<logger name="com.TestMain" additivity="false">-->
+    <logger name="com.TestMain">
         <level value="DEBUG" />
-        <appender-ref ref="CONSOLE" />
-        <appender-ref ref="FILE"/>
     </logger>
 
-    <logger name="com" additivity="false">
+    <logger name="com" >
         <level value="ERROR" />
         <appender-ref ref="CONSOLE" />
     </logger>
 
-    <!--通过<category></category>的定义可以将各个包中的类日志输出到不同的日志文件中-->
-    <!--category 会和root并存-->
-    <!--logger和category如果存在同样位置的输出会报错:这个并存关系不是很理解，不建议同时使用,增加理解难度-->
-    <!--<category name="Test">-->
-        <!--<level value="DEBUG" />-->
-        <!--<appender-ref ref="CONSOLE" />-->
-        <!--&lt;!&ndash;<appender-ref ref="MAIL" />&ndash;&gt;-->
-        <!--<appender-ref ref="FILE"/>-->
-    <!--</category>-->
-
     <!--默认输出到的地方-->
     <root>
-        <priority value="WARN"/>
-        <!--<appender-ref ref="CONSOLE"/>-->
+        <priority value="DEBUG"/>
+        <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
         <appender-ref ref="ROLLFILE"/>
     </root>
