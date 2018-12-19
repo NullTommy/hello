@@ -21,6 +21,12 @@
       <!--以下为自己引入-->
       <fastjson.v>1.2.31</fastjson.v>
       <guava.version>19.0</guava.version>
+      <mybatis-spring.version>1.3.0</mybatis-spring.version>
+      <mybatis.version>3.4.1</mybatis.version>
+      <mysql.version>5.1.40</mysql.version>
+      <tk.mybatis.version>3.3.6</tk.mybatis.version>
+      <pagehelper.version>4.0.0</pagehelper.version>
+      <druid.version>1.0.26</druid.version>
   </properties>
 
   <dependencies>
@@ -44,6 +50,11 @@
           <groupId>org.springframework</groupId>
           <artifactId>spring-webmvc</artifactId>
           <version>4.3.18.RELEASE</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-jdbc</artifactId>
+          <version>4.1.5.RELEASE</version>
       </dependency>
       <!--引入两个包：用于Excel的导出；一个用于后台获取request，poi用于构建Excel-->
       <dependency>
@@ -94,6 +105,42 @@
           <artifactId>commons-pool</artifactId>
           <version>1.6</version>
       </dependency>
+
+      <!-- sql start -->
+      <!--引入：mybatis框架以及阿里druid还有pagehelper-->
+      <dependency>
+          <groupId>org.mybatis</groupId>
+          <artifactId>mybatis-spring</artifactId>
+          <version>${mybatis-spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.mybatis</groupId>
+          <artifactId>mybatis</artifactId>
+          <version>${mybatis.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <version>${mysql.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>tk.mybatis</groupId>
+          <artifactId>mapper</artifactId>
+          <version>${tk.mybatis.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>com.github.pagehelper</groupId>
+          <artifactId>pagehelper</artifactId>
+          <version>${pagehelper.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>com.alibaba</groupId>
+          <artifactId>druid</artifactId>
+          <version>${druid.version}</version>
+      </dependency>
+      <!-- sql end -->
 
       <!--引入Log4j-->
       <dependency>

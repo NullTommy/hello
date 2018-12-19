@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="sqlSessionFactoryWrite" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSourceMaster"/>
+        <property name="mapperLocations" value="classpath*:mapper/write/**/*Mapper.xml"/>
+        <property name="configLocation">
+            <value>classpath:mybatis/mybatisconfig.xml</value>
+        </property>
+
+        <!-- pagehelper -->
+        <!--<property name="typeAliasesPackage" value="com.jd.thailand.dao.entity"/>-->
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageHelper">
+                    <property name="properties">
+                        <value>
+                            dialect=mysql
+                            reasonable=false
+                            supportMethodsArguments=true
+                            params=count=countSql
+                            autoRuntimeDialect=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
+        <!-- pagehelper -->
+    </bean>
+
+
+    <bean id="sqlSessionFactoryRead" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSourceSlave"/>
+        <property name="mapperLocations" value="classpath:mapper/read/**/*Mapper.xml"/>
+        <property name="configLocation">
+            <value>classpath:mybatis/mybatisconfig.xml</value>
+        </property>
+
+        <!-- pagehelper -->
+        <!--<property name="typeAliasesPackage" value="com.jd.thailand.dao.entity"/>-->
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageHelper">
+                    <property name="properties">
+                        <value>
+                            dialect=mysql
+                            reasonable=false
+                            supportMethodsArguments=true
+                            params=count=countSql
+                            autoRuntimeDialect=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
+        <!-- pagehelper -->
+    </bean>
+
+
+    <bean id="sqlSessionWrite" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" name="sqlSessionFactory"  ref="sqlSessionFactoryWrite"/>
+    </bean>
+    <bean id="sqlSessionRead" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" name="sqlSessionFactory" ref="sqlSessionFactoryRead"/>
+    </bean>
+
+    <!-- 定义Mapper接口扫描-->
+    <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.MyMapper.write"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryWrite" />
+    </bean>
+    <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.MyMapper.read"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryRead" />
+    </bean>
+</beans>

@@ -62,5 +62,7 @@
     <import resource="classpath:beans.xml"/>
     <import resource="classpath:datasource.xml"/>
     <import resource="classpath:task.xml"/>
+    <import resource="classpath:mybatis/spring-mybatis.xml"/>
+    <import resource="classpath:mybatis/spring-db-datasource.xml"/>
 
 </beans>
