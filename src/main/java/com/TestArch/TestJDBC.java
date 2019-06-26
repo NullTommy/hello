@@ -1,4 +1,4 @@
-package com.TestMain;
+package com.TestArch;
 
 import java.sql.*;
 
