@@ -35,7 +35,7 @@
 
     <!--输出到文件：自动ROLL-->
     <appender class="org.apache.log4j.RollingFileAppender" name="ROLLFILE">
-        <param name="File" value="E:/rolllog.log"/>
+        <param name="File" value="D:/rolllog.log"/>
         <param name="MaxFileSize" value="10000KB"/>
         <param name="MaxBackupIndex" value="100"/>
         <layout class="org.apache.log4j.PatternLayout">
@@ -45,7 +45,7 @@
 
     <!--输出到文件-->
     <appender name="FILE" class="org.apache.log4j.FileAppender">
-        <param name="File" value="E:/log.log"/>
+        <param name="File" value="D:/log.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern"
                    value="%d - %c -%-4r [%t] %-5p %x - %m%n" />
