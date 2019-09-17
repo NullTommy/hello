@@ -2,6 +2,7 @@ package com.MyController;
 
 import com.MyService.ExcelExportService;
 import com.MyModel.ExportDto;
+import com.MyUtils.ApplicationContextUtil;
 import com.MyUtils.CommonExcelUtil;
 import com.MyUtils.ExcelUtil;
 import com.MyModel.MyBean;
@@ -11,6 +12,7 @@ import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -45,6 +47,14 @@ public class MainController {
 
     @RequestMapping(value = "/test.do",method = RequestMethod.GET)
     public String index() {
+        //http://localhost:8080/test.do
+        return "index";
+    }
+
+    @RequestMapping(value = "/testBean.do",method = RequestMethod.GET)
+    public String testBean() {
+        ApplicationContext applicationContext = ApplicationContextUtil.getApplicationContext();
+        Object fuLu =  applicationContext.getBean("myBean");
         //http://localhost:8080/test.do
         return "index";
     }
