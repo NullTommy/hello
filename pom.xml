@@ -30,6 +30,15 @@
   </properties>
 
   <dependencies>
+
+      <!-- lombok Begin! -->
+      <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+          <version>1.18.10</version>
+      </dependency>
+      <!-- lombok End! -->
+
       <!-- 自动生产mapper Begin! -->
       <dependency>
           <groupId>mysql</groupId>
