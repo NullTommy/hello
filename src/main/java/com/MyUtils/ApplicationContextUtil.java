@@ -17,6 +17,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class ApplicationContextUtil implements ApplicationContextAware {
 
+    /**
+     * spring的全局applicationContext
+     */
     private static ApplicationContext context;
 
     @Override
