@@ -23,7 +23,7 @@
       <guava.version>19.0</guava.version>
       <mybatis-spring.version>1.3.0</mybatis-spring.version>
       <mybatis.version>3.4.1</mybatis.version>
-      <mysql.version>5.1.40</mysql.version>
+      <mysql.version>8.0.21</mysql.version>
       <tk.mybatis.version>3.3.6</tk.mybatis.version>
       <pagehelper.version>4.0.0</pagehelper.version>
       <druid.version>1.0.26</druid.version>
@@ -39,25 +39,29 @@
       </dependency>
       <!-- lombok End! -->
 
-      <!-- 自动生产mapper Begin! -->
-      <dependency>
-          <groupId>mysql</groupId>
-          <artifactId>mysql-connector-java</artifactId>
-          <version>5.1.34</version>
-      </dependency>
-      <!-- 自动生产mapper End! -->
       <dependency>
           <groupId>net.sf.json-lib</groupId>
           <artifactId>json-lib</artifactId>
           <version>2.4</version>
           <classifier>jdk15</classifier>
       </dependency>
+
+      <!-- 引入单元测试  START -->
       <dependency>
           <groupId>junit</groupId>
           <artifactId>junit</artifactId>
-          <version>4.11</version>
+          <version>4.12</version>
           <scope>test</scope>
       </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-test</artifactId>
+          <version>4.3.18.RELEASE</version>
+          <scope>test</scope>
+      </dependency>
+
+      <!-- 引入单元测试  END  -->
+
 
       <!--引入 fastJson-->
       <dependency>
@@ -79,10 +83,12 @@
           <version>4.1.5.RELEASE</version>
       </dependency>
       <!--引入两个包：用于Excel的导出；一个用于后台获取request，poi用于构建Excel-->
+      <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
       <dependency>
           <groupId>javax.servlet</groupId>
-          <artifactId>servlet-api</artifactId>
-          <version>2.5</version>
+          <artifactId>javax.servlet-api</artifactId>
+          <version>3.0.1</version>
+          <scope>provided</scope>
       </dependency>
       <dependency>
           <groupId>org.apache.poi</groupId>
@@ -102,14 +108,6 @@
           <artifactId>guava</artifactId>
           <version>${guava.version}</version>
       </dependency>
-
-      <!--引入JDBC-->
-      <dependency>
-          <groupId>mysql</groupId>
-          <artifactId>mysql-connector-java</artifactId>
-          <version>5.1.39</version>
-      </dependency>
-
 
       <!--引入DBCP数据库连接池-->
       <dependency>

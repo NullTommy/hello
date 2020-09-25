@@ -10,11 +10,11 @@ public class TestJDBC {
 
     //本代码参考链接 ： http://www.cnblogs.com/hongten/archive/2011/03/29/1998311.html
     public static void main(String[] args) {
-        String driver = "com.mysql.jdbc.Driver";
+        String driver = "com.mysql.cj.jdbc.Driver";
         String dbName = "test";  //本地数据库的库名
         String passwrod = "admin";  //自己安装数据库时配置的密码
         String userName = "root";   //一般默认
-        String url = "jdbc:mysql://localhost:3306/" + dbName;  //本地mysql连接一般默认
+        String url = "jdbc:mysql://localhost:3306/" + dbName +"?useSSL=false&serverTimezone=UTC";  //本地mysql连接一般默认
         String sql = "select * from test"; //具体sql
 
         try {
