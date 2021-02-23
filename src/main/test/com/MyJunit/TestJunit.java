@@ -1,5 +1,6 @@
 package com.MyJunit;
 
+import com.MyOther.Junit;
 import org.junit.*;
 
 import static org.junit.Assert.assertEquals;
