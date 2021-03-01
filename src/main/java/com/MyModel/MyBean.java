@@ -47,4 +47,9 @@ public class MyBean {
                 ", age='" + age +'\'' +
                 '}';
     }
+
+    @Override
+    public void test(String test) {
+
+    }
 }
