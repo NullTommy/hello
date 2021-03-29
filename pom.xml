@@ -47,12 +47,14 @@
       </dependency>
       <!-- lombok End! -->
 
+      <!--引入 json START -->
       <dependency>
           <groupId>net.sf.json-lib</groupId>
           <artifactId>json-lib</artifactId>
           <version>2.4</version>
           <classifier>jdk15</classifier>
       </dependency>
+      <!--引入 json END -->
 
       <!-- 引入单元测试  START -->
       <dependency>
@@ -67,19 +69,19 @@
           <version>4.3.18.RELEASE</version>
           <scope>test</scope>
       </dependency>
-
       <!-- 引入单元测试  END  -->
 
 
-      <!--引入 fastJson-->
+      <!--引入 fastJson START -->
       <dependency>
           <groupId>com.alibaba</groupId>
           <artifactId>fastjson</artifactId>
           <version>${fastjson.v}</version>
       </dependency>
+      <!--引入 fastJson END -->
 
       <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
-      <!--引入Spring MVC 的包-->
+      <!--引入Spring MVC 的包 START -->
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-webmvc</artifactId>
@@ -90,7 +92,9 @@
           <artifactId>spring-jdbc</artifactId>
           <version>4.1.5.RELEASE</version>
       </dependency>
-      <!--引入两个包：用于Excel的导出；一个用于后台获取request，poi用于构建Excel-->
+      <!--引入Spring MVC 的包 END-->
+
+      <!--引入两个包：用于Excel的导出；一个用于后台获取request，poi用于构建Excel START -->
       <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
       <dependency>
           <groupId>javax.servlet</groupId>
@@ -103,21 +107,30 @@
           <artifactId>poi</artifactId>
           <version>3.9</version>
       </dependency>
+      <!--引入两个包：用于Excel的导出；一个用于后台获取request，poi用于构建Excel END -->
 
-      <!--引入net.sf.jxls：用于实现从模板导出Excel-->
+      <!--引入net.sf.jxls：用于实现从模板导出Excel START -->
       <dependency>
           <groupId>net.sf.jxls</groupId>
           <artifactId>jxls-core</artifactId>
           <version>1.0.6</version>
       </dependency>
-      <!--引入工具类-->
+      <!--引入net.sf.jxls：用于实现从模板导出Excel END -->
+
+      <!--引入工具类 START -->
       <dependency>
           <groupId>com.google.guava</groupId>
           <artifactId>guava</artifactId>
           <version>${guava.version}</version>
       </dependency>
+      <dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-lang3</artifactId>
+          <version>3.7</version>
+      </dependency>
+      <!--引入工具类 END -->
 
-      <!--引入DBCP数据库连接池-->
+      <!--引入DBCP数据库连接池 START -->
       <dependency>
           <groupId>commons-dbcp</groupId>
           <artifactId>commons-dbcp</artifactId>
@@ -133,6 +146,7 @@
           <artifactId>commons-pool</artifactId>
           <version>1.6</version>
       </dependency>
+      <!--引入DBCP数据库连接池 END -->
 
       <!-- sql start -->
       <!--引入：mybatis框架以及阿里druid还有pagehelper-->
@@ -151,7 +165,6 @@
           <artifactId>mysql-connector-java</artifactId>
           <version>${mysql.version}</version>
       </dependency>
-
       <dependency>
           <groupId>tk.mybatis</groupId>
           <artifactId>mapper</artifactId>
@@ -162,7 +175,6 @@
           <artifactId>pagehelper</artifactId>
           <version>${pagehelper.version}</version>
       </dependency>
-
       <dependency>
           <groupId>com.alibaba</groupId>
           <artifactId>druid</artifactId>
@@ -170,7 +182,7 @@
       </dependency>
       <!-- sql end -->
 
-      <!--引入Log4j-->
+      <!--引入Log4j START-->
       <dependency>
           <groupId>log4j</groupId>
           <artifactId>log4j</artifactId>
@@ -181,6 +193,7 @@
           <artifactId>slf4j-log4j12</artifactId>
           <version>1.7.2</version>
       </dependency>
+      <!--引入Log4j END-->
   </dependencies>
 
   <build>
