@@ -30,6 +30,26 @@
   </properties>
 
   <dependencies>
+
+      <!-- AOP Begin! -->
+      <!--spring aop支持-->
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-aop</artifactId>
+          <version>4.3.18.RELEASE</version>
+      </dependency>
+      <!--aspectj支持-->
+      <dependency>
+          <groupId>org.aspectj</groupId>
+          <artifactId>aspectjrt</artifactId>
+          <version>1.8.5</version>
+      </dependency>
+      <dependency>
+          <groupId>org.aspectj</groupId>
+          <artifactId>aspectjweaver</artifactId>
+          <version>1.8.9</version>
+      </dependency>
+      <!-- AOP end! -->
       <!-- fileupload Begin! -->
       <!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
       <dependency>
