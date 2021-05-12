@@ -48,7 +48,8 @@ public class MainController {
     @RequestMapping(value = "/test.do",method = RequestMethod.GET)
     public String index() {
         //http://localhost:8080/test.do
-        return "index";
+        System.out.println("run：" + "index");
+        return "index-return";
     }
 
     @RequestMapping(value = "/testBean.do",method = RequestMethod.GET)
