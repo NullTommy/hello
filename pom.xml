@@ -214,6 +214,19 @@
           <version>1.7.2</version>
       </dependency>
       <!--引入Log4j END-->
+
+      <!--引入 HTTP START-->
+      <dependency>
+          <groupId>org.apache.httpcomponents</groupId>
+          <artifactId>httpclient</artifactId>
+          <version>4.5.3</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.httpcomponents</groupId>
+          <artifactId>httpcore</artifactId>
+          <version>4.4.6</version>
+      </dependency>
+      <!--引入 HTTP END-->
   </dependencies>
 
   <build>
