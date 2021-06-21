@@ -24,6 +24,8 @@ public class TestHttp {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         //2.生成一个get请求
         HttpGet httpget = new HttpGet("http://www.baidu.com/");
+        //附：如何设置Cookie
+        httpget.setHeader("Cookie", "RK=Gga0SaEucU");
         //3.执行get请求并返回结果
         CloseableHttpResponse response = httpclient.execute(httpget);
 
