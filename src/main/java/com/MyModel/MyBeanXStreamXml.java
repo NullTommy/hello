@@ -1,10 +1,14 @@
 package com.MyModel;
 
+import java.util.List;
+
 public class MyBeanXStreamXml {
 
     private String name;
     private String id;
     private String age;
+
+    private List<MyBeanItemXStreamXml> itemList;
 
     public String getName() {
         return name;
@@ -28,5 +32,13 @@ public class MyBeanXStreamXml {
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+    public List<MyBeanItemXStreamXml> getItemList() {
+        return itemList;
+    }
+
+    public void setItemList(List<MyBeanItemXStreamXml> itemList) {
+        this.itemList = itemList;
     }
 }
