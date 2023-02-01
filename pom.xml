@@ -19,7 +19,7 @@
       <maven.compiler.source>1.7</maven.compiler.source>
       <maven.compiler.target>1.7</maven.compiler.target>
       <!--以下为自己引入-->
-      <fastjson.v>1.2.44</fastjson.v>
+      <fastjson.v>1.2.83</fastjson.v>
       <guava.version>19.0</guava.version>
       <mybatis-spring.version>1.3.0</mybatis-spring.version>
       <mybatis.version>3.4.1</mybatis.version>
